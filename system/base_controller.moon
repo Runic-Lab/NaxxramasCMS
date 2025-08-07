@@ -1,0 +1,73 @@
+module "System", package.seeall
+export BaseController
+
+class BaseController
+    validate_params: (params, rules) =>
+        errors = {}
+        params or= {}
+        
+        for param_name, rule_config in pairs rules
+            value = params[param_name]
+            
+            if rule_config.required and (not value or value == "")
+                errors[param_name] = rule_config.required_message or "#{param_name} is required"
+                continue
+            
+            continue unless value and value != ""
+            
+            str_value = tostring(value)
+            
+            if rule_config.type
+                actual_type = type(value)
+                if actual_type != rule_config.type
+                    errors[param_name] = rule_config.type_message or "#{param_name} must be of type #{rule_config.type}"
+                    continue
+            
+            str_len = #str_value
+            
+            if rule_config.min_length and str_len < rule_config.min_length
+                errors[param_name] = rule_config.min_length_message or 
+                    "#{param_name} must be at least #{rule_config.min_length} characters"
+
+            if rule_config.max_length and str_len > rule_config.max_length
+                errors[param_name] = rule_config.max_length_message or 
+                    "#{param_name} must be no more than #{rule_config.max_length} characters"
+
+            if rule_config.pattern and not string.match(str_value, rule_config.pattern)
+                errors[param_name] = rule_config.pattern_message or 
+                    "#{param_name} has invalid format"
+            
+            if rule_config.min_value or rule_config.max_value
+                num_value = tonumber(value)
+                if num_value
+                    if rule_config.min_value and num_value < rule_config.min_value
+                        errors[param_name] = rule_config.min_value_message or 
+                            "#{param_name} must be at least #{rule_config.min_value}"
+
+                    if rule_config.max_value and num_value > rule_config.max_value
+                        errors[param_name] = rule_config.max_value_message or 
+                            "#{param_name} must be no more than #{rule_config.max_value}"
+                else
+                    errors[param_name] = "#{param_name} must be a valid number"
+            
+            if rule_config.validator and type(rule_config.validator) == "function"
+                is_valid, custom_message = rule_config.validator(value)
+                unless is_valid
+                    errors[param_name] = custom_message or "#{param_name} is invalid"
+
+        success = next(errors) == nil
+        return success, errors
+
+    render_view: (view_module) =>
+        unless view_module
+            error "view_module is required"
+        
+        return {
+            render: view_module
+        }
+    
+    redirect: (url, status = 302) =>
+        return {
+            redirect: url
+            status: status
+        }
