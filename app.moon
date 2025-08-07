@@ -38,6 +38,7 @@ SetupApplicationInstance = ->
 
     application\enable "etlua"
     application.html = require "lapis.html"
+    application.layout = require "applications.themes.default.layout"
 
     module_loader\load application, "applications/modules"
 
