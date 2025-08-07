@@ -1,14 +1,17 @@
---- Main controller for the `home` module.
--- Defines the `index` function that renders the module's main view.
--- @return table Table of exposed actions.
--- @see applications.modules.home.view.index
-home_view = require "applications.modules.home.view.index"
+HomeView = require "applications.modules.home.view.index"
 
---- Action for the `/` route.
--- Renders the view defined in `home.view.index`.
-index = =>
-    render: home_view
+class HomeController extends System.BaseController
+    index: (application) =>
+        application.locals = {
+            title: "Welcome to NaxxramasCMS"
+            message: "Hello from the home controller"
+            current_time: os.date "%Y-%m-%d %H:%M:%S"
+        }
 
+        return @render_view HomeView
+
+controller = HomeController!
 return {
-    index: index
+    index: (application) ->
+        controller\index application
 }

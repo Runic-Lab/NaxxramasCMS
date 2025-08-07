@@ -1,1 +1,14 @@
-<h1>Coucou</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= locals.title %></title>
+</head>
+<body>
+    <h1><%= locals.title %></h1>
+    <p><%= locals.message %></p>
+    <p>Current time: <%= locals.current_time %></p>
+</body>
+</html>
