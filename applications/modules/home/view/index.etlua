@@ -1,14 +1,38 @@
+<section class="h-full">
+    <section class="h-screen text-white bg-gray-500 flex flex-col pt-[70px]">
+        <h1>Coucou</h1>
+        <p >Description</p>
+        <div>
+            <button class="bg-white text-red-500 px-4 py-2 rounded hover:bg-red-100">Presentation serveur</button>
+            <button class="bg-white text-red-500 px-4 py-2 rounded hover:bg-red-100">Jouer</button>
+        </div>
+    </section>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= locals.title %></title>
-</head>
-<body>
-    <h1><%= locals.title %></h1>
-    <p><%= locals.message %></p>
-    <p>Current time: <%= locals.current_time %></p>
-</body>
-</html>
+    <section class="h-[300px] justify-center items-center text-white bg-gray-800 flex flex-col">
+        <h2>Coucou</h2>
+        <hr>
+        <div class="flex">
+            <div class="mx-20">
+                <p>1</p>
+                <p>Joueurs en ligne</p>
+            </div>
+            <div class="mx-20">
+                <p>En ligne</p>
+                <p>Etat du royaume</p>
+            </div>
+            <div class="mx-20">
+                <p>100%</p>
+                <p>Alliance</p>
+            </div>
+            <div class="mx-20">
+                <p>0%</p>
+                <p>Horde</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="h-[600px] text-white bg-gray-500 flex flex-col items-center pt-[70px]">
+        <% render("applications.modules.news.view.latest", locals.news_list) %>
+    </section>
+
+</section>
