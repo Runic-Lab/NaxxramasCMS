@@ -39,6 +39,9 @@ news_list = {
 }
 
 class NewsController extends System.BaseController
+    @\action "latest"
+    @\action "index"
+
     latest: (application, options = {}) =>
         limit = options.limit or 1
         
@@ -63,12 +66,4 @@ class NewsController extends System.BaseController
 
         return @render_view NewsListIndex
 
-news_controller = NewsController!
-
-return {
-    index: (application) ->
-        news_controller\index application
-
-    latest: (application, options) ->
-        news_controller\latest application, options
-}
+NewsController!\register_as "news"
