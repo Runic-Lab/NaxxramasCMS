@@ -1,0 +1,21 @@
+<% if (locals.news_list) then %>
+    <% for i, news in pairs(locals.news_list) do %>
+        <div class="h-[300px] w-[400px] bg-red-500 overflow-hidden rounded shadow-lg">
+            
+            <div class="h-[150px] w-full overflow-hidden">
+                <img 
+                    src="https://hds.hel.fi/images/foundation/visual-assets/placeholders/image-m@3x.png" 
+                    alt="Image"
+                    class="w-full h-full object-cover"
+                >
+            </div>
+
+            <div class="p-4">
+                <h3 class="text-xl font-semibold mb-2"><%= news.title %></h3>
+                <p class="text-sm mb-2"><%= news.content %></p>
+                <span class="text-xs text-gray-200"><%= news.published_date %></span>
+            </div>
+            
+        </div>
+    <% end %>
+<% end %>
