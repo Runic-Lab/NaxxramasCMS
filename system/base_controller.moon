@@ -2,6 +2,45 @@ module "System", package.seeall
 export BaseController
 
 class BaseController
+    @action_registry = {}
+    
+    new: =>
+        @_mediator = nil
+    
+    get_mediator: =>
+        unless @_mediator
+            @_mediator = System.ModuleMediator\get_instance!
+        return @_mediator
+    
+    @action: (method_name) =>
+        class_name = @.__name
+        @@action_registry[class_name] or= {}
+        
+        for existing_action in *@@action_registry[class_name]
+            return if existing_action == method_name
+        
+        table.insert @@action_registry[class_name], method_name
+        return @
+    
+    register_as: (module_name, actions = nil) =>
+        mediator = @get_mediator!
+        class_name = @@.__name
+        
+        registered_actions = @@action_registry[class_name] or {}
+        actions_to_register = actions or registered_actions
+        
+        return @ unless #actions_to_register > 0
+        
+        handlers = {}
+        for action in *actions_to_register
+            if @[action] and type(@[action]) == "function"
+                method = @[action]
+                handlers[action] = (application, params) ->
+                    method @, application, params
+        
+        mediator\register_module module_name, handlers if next(handlers)
+        return @
+    
     validate_params: (params, rules) =>
         errors = {}
         params or= {}
@@ -61,13 +100,7 @@ class BaseController
     render_view: (view_module) =>
         unless view_module
             error "view_module is required"
-        
-        return {
-            render: view_module
-        }
+        return { render: view_module }
     
     redirect: (url, status = 302) =>
-        return {
-            redirect: url
-            status: status
-        }
+        return { redirect: url, status: status }

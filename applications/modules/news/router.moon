@@ -1,8 +1,9 @@
 app_respond_to = require("lapis.application").respond_to
 
-controller = require "applications.modules.news.controller.news_controller"
+mediator = System.ModuleMediator\get_instance!
 
 return (self) -> 
     @\match "/news", app_respond_to {
-        GET: controller.index
+        GET: (app) ->
+            mediator\request "news", "index", app
     }

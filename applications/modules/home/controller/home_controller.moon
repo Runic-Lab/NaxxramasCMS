@@ -1,9 +1,14 @@
 HomeView = require "applications.modules.home.view.index"
-NewsController = require "applications.modules.news.controller.news_controller"
+
+mediator = System.ModuleMediator\get_instance!
 
 class HomeController extends System.BaseController
+    @\action "index"
+    
     index: (application) =>
-        news_widget_data = NewsController.latest application, {
+        mediator = @get_mediator!
+        
+        news_widget_data = mediator\request "news", "latest", application, {
             limit: 3
             title: "Dernières actualités"
             show_date: true
@@ -20,9 +25,4 @@ class HomeController extends System.BaseController
 
         return @render_view HomeView
 
-controller = HomeController!
-
-return {
-    index: (application) ->
-        controller\index application
-}
+HomeController!\register_as "home"
