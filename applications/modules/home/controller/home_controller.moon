@@ -8,13 +8,7 @@ class HomeController extends System.BaseController
     index: (application) =>
         mediator = @get_mediator!
         
-        news_widget_data = mediator\request "news", "latest", application, {
-            limit: 3
-            title: "Dernières actualités"
-            show_date: true
-            show_author: true
-            excerpt: true
-        }
+        news_widget_data = mediator\request "news", "latest", application, 3
 
         application.locals = {
             title: "Welcome to NaxxramasCMS"
