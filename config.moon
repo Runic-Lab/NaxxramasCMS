@@ -4,3 +4,8 @@ config "development", ->
   server "nginx"
   code_cache "off"
   num_workers "1"
+  mysql ->
+    host "127.0.0.1"
+    user "naxxramas_user"
+    password "naxxramas_passwd"
+    database "naxxramas_db"
