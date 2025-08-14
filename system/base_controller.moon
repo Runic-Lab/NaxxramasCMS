@@ -97,9 +97,20 @@ class BaseController
         success = next(errors) == nil
         return success, errors
 
-    render_view: (view_module) =>
-        unless view_module
-            error "view_module is required"
+    get_module_name: =>
+        class_name = @@.__name
+        unless class_name
+            error "Could not determine module name"
+        return class_name\gsub("Controller", "")\lower!
+    
+    render_view: (view_name) =>
+        unless view_name and type(view_name) == "string"
+            error "view_name (string) is required"
+        
+        module_name = @get_module_name!
+        view_resolver = System.ViewResolver\get_instance!
+        resolved_view = view_resolver\resolve_view module_name, view_name
+        view_module = require resolved_view
         return { render: view_module }
     
     redirect: (url, status = 302) =>
