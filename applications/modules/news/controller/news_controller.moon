@@ -1,4 +1,3 @@
-NewsListIndex = require "applications.modules.news.view.index"
 NewsModel = require "applications.modules.news.model.news_model"
 
 class NewsController extends System.BaseController
@@ -26,6 +25,6 @@ class NewsController extends System.BaseController
             current_time: os.date "%Y-%m-%d %H:%M:%S"
         }
 
-        return @render_view NewsListIndex
+        return @render_view "index"
 
 NewsController!\register_as "news"
