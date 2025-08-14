@@ -1,5 +1,3 @@
-HomeView = require "applications.modules.home.view.index"
-
 mediator = System.ModuleMediator\get_instance!
 
 class HomeController extends System.BaseController
@@ -17,6 +15,6 @@ class HomeController extends System.BaseController
             news_list: news_widget_data
         }
 
-        return @render_view HomeView
+        return @render_view "index"
 
 HomeController!\register_as "home"
