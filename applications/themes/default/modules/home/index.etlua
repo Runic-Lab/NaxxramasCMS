@@ -100,7 +100,7 @@
             </div>
             
             <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700 p-8">
-                <% render("applications.modules.news.view.latest", locals.news_list) %>
+                <% render(System.ThemeHelper:resolve("news", "latest"), { news_list = locals.news_list }) %>
             </div>
         </div>
     </section>
