@@ -1,0 +1,77 @@
+<header class="uppercase flex items-center justify-between w-full h-[70px] bg-[rgba(0,0,0,0.35)] backdrop-blur border-b border-[#363636] px-20 fixed top-0 left-0 z-50">
+
+    <!-- Logo and main navigation -->
+    <div class="flex items-center">
+        <!-- Logo -->
+        <a href="#"><img class="mr-12 h-12 font-bold text-white" src="https://i.ibb.co/PZ07mytj/Naxxramas-Logo-text.png"></img></a>
+
+        <!-- Navigation menu -->
+        <nav>
+            <ul class="flex space-x-6 text-white">
+                <!-- Home link -->
+                <li><a href="#" class="hover:text-[#EBA309] hover:border-b-1 pb-6">Home</a></li>
+
+                <!-- News link -->
+                <li><a href="#" class="hover:text-[#EBA309] hover:border-b-1 pb-6">News</a></li>
+
+                <!-- Game Info dropdown -->
+                <li class="relative group">
+                    <a href="#" class="hover:text-[#EBA309] pb-7">
+                        Game Info
+                        <!-- Rotating arrow on hover -->
+                        <span class="ml-1 transition-transform duration-200 group-hover:rotate-180 inline-block">
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 15.5831L13.4134 8.9964C13.0367 8.62509 12.529 8.41693 12 8.41693C11.471 8.41693 10.9633 8.62509 10.5866 8.9964L4 15.5831"
+                                    stroke="currentColor"
+                                    stroke-width="4"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <!-- Dropdown menu for Game Info -->
+                    <ul class="absolute left-0 mt-[24px] w-40 bg-[rgba(0,0,0,0.35)] shadow-[0_-1px_0_0_rgba(0,0,0,0.35)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <li><a href="#" class="block px-4 py-2 text-white hover:text-[#EBA309] hover:bg-[rgba(0,0,0,0.35)]">News</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-white hover:text-[#EBA309] hover:bg-[rgba(0,0,0,0.35)]">Updates</a></li>
+                    </ul>
+                </li>
+
+                <!-- Discord link -->
+                <li><a href="#" class="hover:text-[#EBA309] hover:border-b-1 pb-6">Discord</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- User account dropdown -->
+    <div class="relative group inline-block">
+        <!-- Account button with icon and arrow -->
+        <a href="#" class="flex items-center hover:text-[#EBA309] text-white">
+            <!-- User icon -->
+            <svg class="mr-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.6177 21.25C19.6177 17.6479 15.6021 14.7206 12 14.7206C8.39794 14.7206 4.38235 17.6479 4.38235 21.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 11.4559C14.404 11.4559 16.3529 9.50701 16.3529 7.10294C16.3529 4.69888 14.404 2.75 12 2.75C9.59594 2.75 7.64706 4.69888 7.64706 7.10294C7.64706 9.50701 9.59594 11.4559 12 11.4559Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Account 
+            <!-- Rotating arrow for account button -->
+            <span class="ml-1 transition-transform duration-200 group-hover:rotate-180 inline-block">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 15.5831L13.4134 8.9964C13.0367 8.62509 12.529 8.41693 12 8.41693C11.471 8.41693 10.9633 8.62509 10.5866 8.9964L4 15.5831"
+                        stroke="currentColor"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+            </span>
+        </a>
+
+        <!-- Dropdown menu for Account -->
+        <div class="absolute left-0 mt-[24px] w-40 bg-[rgba(0,0,0,0.35)] shadow-[0_-1px_0_0_rgba(0,0,0,0.35)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <a href="#" class="block px-4 py-2 text-white hover:text-[#EBA309] hover:bg-[rgba(0,0,0,0.35)]">Profile</a>
+            <a href="#" class="block px-4 py-2 text-white hover:text-[#EBA309] hover:bg-[rgba(0,0,0,0.35)]">Logout</a>
+        </div>
+    </div>
+
+</header>
