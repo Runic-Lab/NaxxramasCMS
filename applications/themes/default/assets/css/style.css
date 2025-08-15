@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* Design system definitions */
+@theme {
+  --color-body: #100D0C;
+  --color-font-white: #fff;
+  --color-font-gold: #EBA309;
+  --color-bg-red-button: #8A1E09;
+  --color-orange-outline-button: #EBA309;
+
+  --font-size-base: 16px;
+}
+
+@layer base {
+
+  /* Body Brown */
+  body {
+    background-color: var(--color-body);
+    color: var(--color-font-white);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-font-white);
+  }
+
+  /* Paragraphs White, 16px */
+  p {
+    font-size: var(--font-size-base);
+  }
+}
+
+@layer components {
+
+  /** Gradient line container **/
+  .line-container {
+    @apply relative w-full h-px bg-gradient-to-r from-transparent via-[#363636] to-transparent;
+  }
+
+  .line-highlight {
+    @apply absolute h-px w-1/6 left-0 ml-[82px] bg-gradient-to-r from-transparent via-[#EBA309] to-transparent;
+  }
+
+  /** Buttons **/
+  /* Solid orange background with red accents */
+  .orange-bg-red-button {
+    @apply text-xl uppercase px-6 py-2 transition-colors duration-200 
+           bg-[#8A1E09] border border-[#EBA309] text-[#EBA309];
+  }
+
+  .orange-bg-red-button:hover {
+    @apply bg-[#a12b15] border-[#FFCC33];
+  }
+
+  /* Outline button with semi-transparent background */
+  .orange-outline-button {
+    @apply text-xl uppercase px-6 py-2 transition-colors duration-200
+           bg-[rgba(16,13,12,0.4)] border border-[#EBA309] text-[#EBA309];
+  }
+
+  .orange-outline-button:hover {
+    @apply bg-[rgba(235,163,9,0.2)] border-[#FFCC33];
+  }
+}
