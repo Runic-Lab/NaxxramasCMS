@@ -1,36 +1,28 @@
-<div class="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+<div class="min-h-screen">
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center pt-[70px] overflow-hidden">
-        <!-- Background gradient overlay -->
-        <div class="absolute inset-0 bg-gradient-to-br from-red-900/20 to-purple-900/20"></div>
-        
-        <!-- Animated background elements -->
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-red-500 rounded-full blur-3xl animate-pulse"></div>
-            <div class="absolute bottom-1/3 right-1/3 w-48 h-48 bg-purple-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    <section class="relative h-screen flex items-center pt-[70px] overflow-hidden">
+
+        <!-- Image background with overlay -->
+        <div class="absolute inset-0 bg-no-repeat bg-cover bg-center -z-10" 
+            style="background-image: url('https://cdn.discordapp.com/attachments/1344827438026461285/1404836980696547408/jwzd21zxohb61.png?ex=689fefa4&is=689e9e24&hm=06a2d69a5593236b52a246367a4b257e5520540f053b7754a7433114fb9d1d68&');">
         </div>
-        
+
+        <!-- Optional dark overlay for readability -->
+        <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+
         <!-- Content -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
-            <h1 class="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-yellow-400 to-red-600 mb-6 animate-fade-in">
-                NAXXRAMAS
+        <div class="relative z-10 flex flex-col justify-start px-20">
+            <h1 class="text-6xl md:text-8xl font-medium mb-6 animate-fade-in">
+                Naxxramas
             </h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                🏰 Le serveur World of Warcraft Classic qui vous attend dans les profondeurs de Naxxramas
-            </p>
-            <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-                Explorez le donjon le plus redoutable d'Azeroth et affrontez Kel'Thuzad dans son propre domaine
+            <p class="text-gray-300 mb-8 leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur. Tellus pellentesque viverra iaculis dui quis ac fringilla blandit. Aliquet ut eu arcu nulla convallis tempor feugiat.
             </p>
             
             <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button class="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-bold rounded-lg shadow-2xl hover:from-red-500 hover:to-red-600 transform hover:scale-105 transition-all duration-300">
-                    <span class="absolute inset-0 rounded-lg bg-gradient-to-r from-red-400 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur"></span>
-                    <span class="relative">⚔️ Rejoindre l'aventure</span>
-                </button>
-                <button class="px-8 py-4 border-2 border-red-500 text-red-400 font-bold rounded-lg hover:bg-red-500 hover:text-white transition-all duration-300 backdrop-blur-sm">
-                    📜 Découvrir le serveur
-                </button>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#" class="orange-bg-red-button">sign up today</a>
+                <a href="#" class="orange-outline-button">learn more</a>
             </div>
         </div>
         
@@ -40,71 +32,114 @@
                 <div class="w-1 h-3 bg-red-400 rounded-full animate-bounce mt-2"></div>
             </div>
         </div>
+
     </section>
 
     <!-- Server Stats Section -->
-    <section class="py-20 bg-gray-900/50 backdrop-blur-sm">
-        <div class="max-w-6xl mx-auto px-6">
+    <section class="relative py-20 bg-gray-900 backdrop-blur-sm">
+
+        <!-- Image background with overlay -->
+        <div class="absolute inset-0 bg-no-repeat bg-cover bg-center -z-10" 
+            style="background-image: url('https://cdn.discordapp.com/attachments/1344827438026461285/1404837846715727933/d0b43e31488c1b99029d.png?ex=689ff073&is=689e9ef3&hm=b915697a247e25750f7b47962f813f2a6769c23bdf08ab7ff91b380ccf076e6f&');">
+        </div>
+
+        <!-- Statistics container -->
+        <div class="relative z-10 max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-white mb-4">📊 État du Royaume</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-purple-500 mx-auto"></div>
+                <h2 class="text-4xl font-medium text-white mb-4">Statistics</h2>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Online Players -->
-                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700 hover:border-red-500 transition-all duration-300 group">
+                <div class="transition-all duration-300 group">
                     <div class="text-center">
-                        <div class="text-5xl font-bold text-green-400 mb-2 group-hover:scale-110 transition-transform">1</div>
-                        <div class="text-gray-300 text-lg">👥 Joueurs en ligne</div>
-                        <div class="text-sm text-gray-500 mt-2">Temps réel</div>
+                        <div class="text-2xl font-bold mb-2 group-hover:scale-110 transition-transform">1</div>
+                        <div class="text-lg">Online players</div>
                     </div>
                 </div>
 
                 <!-- Server Status -->
-                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700 hover:border-green-500 transition-all duration-300 group">
+                <div class="transition-all duration-300 group">
                     <div class="text-center">
-                        <div class="text-2xl font-bold text-green-400 mb-2 group-hover:scale-110 transition-transform">⚡ EN LIGNE</div>
-                        <div class="text-gray-300 text-lg">🏰 État du royaume</div>
-                        <div class="text-sm text-green-400 mt-2">● Opérationnel</div>
+                        <div class="text-2xl text-green-700 font-bold mb-2 group-hover:scale-110 transition-transform">Online</div>
+                        <div class="text-lg">State of the kingdom</div>
                     </div>
                 </div>
 
                 <!-- Alliance -->
-                <div class="bg-gradient-to-br from-blue-900/30 to-gray-900 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 group">
+                <div class="transition-all duration-300 group">
                     <div class="text-center">
-                        <div class="text-5xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform">100%</div>
-                        <div class="text-gray-300 text-lg">🛡️ Alliance</div>
-                        <div class="text-sm text-blue-400 mt-2">Population</div>
+                        <div class="text-2xl font-bold mb-2 group-hover:scale-110 transition-transform">100%</div>
+                        <div class="text-blue-700 text-lg">Alliance</div>
                     </div>
                 </div>
 
                 <!-- Horde -->
-                <div class="bg-gradient-to-br from-red-900/30 to-gray-900 p-8 rounded-xl border border-gray-700 hover:border-red-500 transition-all duration-300 group">
+                <div class="transition-all duration-300 group">
                     <div class="text-center">
-                        <div class="text-5xl font-bold text-red-400 mb-2 group-hover:scale-110 transition-transform">0%</div>
-                        <div class="text-gray-300 text-lg">⚔️ Horde</div>
-                        <div class="text-sm text-red-400 mt-2">Population</div>
+                        <div class="text-2xl font-bold mb-2 group-hover:scale-110 transition-transform">0%</div>
+                        <div class="text-red-800 text-lg">Horde</div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="line-container absolute bottom-0">
+            <div class="line-highlight"></div>
+        </div>
+
+    </section>
+
+    <!-- News Section -->
+    <section class="body py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex text-center mb-16">
+                <h2 class="uppercase font-bold text-white mr-2">news and updates</h2>
+                <a href="#" class="text-[#EBA309] text-sm">All news</a>
+            </div>
+            
+            <div class="">
+                <% render(System.ThemeHelper:resolve("news", "latest"), { news_list = locals.news_list }) %>
             </div>
         </div>
     </section>
 
     <!-- News Section -->
-    <section class="py-20 bg-gradient-to-b from-gray-900/50 to-gray-900">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-white mb-4">📰 Dernières Nouvelles</h2>
-                <p class="text-gray-400 text-lg">Restez informé des dernières mises à jour et événements</p>
-                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-red-500 mx-auto mt-4"></div>
+    <section class="relative py-20">
+        <!-- Image background with overlay -->
+        <div class="absolute inset-0 bg-no-repeat bg-cover bg-center -z-10" 
+            style="background-image: url('https://media.discordapp.net/attachments/1344827438026461285/1404837921864941628/thumb-1920-137002.png?ex=689ff085&is=689e9f05&hm=1daed2162443c7c104c0cf4225fd43ad3a2f1be6a8964dd824f4f0fbfeaa4f3d&=&format=webp&quality=lossless&width=1489&height=838');">
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="mb-16">
+                <h2 class="uppercase font-bold text-white text-4xl mb-2">Join us</h2>
             </div>
-            
-            <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700 p-8">
-                <% render(System.ThemeHelper:resolve("news", "latest"), { news_list = locals.news_list }) %>
+
+            <!-- Cards Container -->
+            <div class="flex gap-6 justify-center">
+                <!-- Card 1 -->
+                <div class="bg-[#100D0C] bg-opacity-70 border border-[#7E7E7E] p-6 shadow-md w-full md:w-1/3">
+                    <h2 class="text-xl text-[#EBA309] font-bold mb-2">Card 1</h2>
+                    <p class="text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Tortor ut velit ultricies facilisis</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-[#100D0C] border border-[#7E7E7E] hover:boder-[#EBA309] p-6 shadow-md w-full md:w-1/3">
+                    <h2 class="text-xl text-[#EBA309] font-bold mb-2">Card 2</h2>
+                    <p class="text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Tortor ut velit ultricies facilisis</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-[#100D0C] bg-opacity-70 border border-[#7E7E7E] p-6 shadow-md w-full md:w-1/3">
+                    <h2 class="text-xl text-[#EBA309] font-bold mb-2">Card 3</h2>
+                    <p class="text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Tortor ut velit ultricies facilisis</p>
+                </div>
             </div>
         </div>
     </section>
-</div>
+
+
 
 <style>
 @keyframes fade-in {
