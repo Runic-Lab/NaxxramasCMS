@@ -42,6 +42,10 @@ luac.out
 # Ignore lua
 *.lua
 
+# Tailwind
+node_modules
+package-lock.json
+
 # Lapis
 logs/
 *.log
