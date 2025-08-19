@@ -14,9 +14,10 @@
         
         <!-- App css -->
         <link href="/themes/default/assets/css/output.css" rel="stylesheet" />
+        <link href="/themes/default/assets/css/style.css" rel="stylesheet" />
 
         <!-- Custom JS -->
-        <script type="module" src="assets/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
     <body>
 
