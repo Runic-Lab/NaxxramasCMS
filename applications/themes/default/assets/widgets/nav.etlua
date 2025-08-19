@@ -9,10 +9,10 @@
         <nav>
             <ul class="flex space-x-6 text-white">
                 <!-- Home link -->
-                <li><a href="#" class="hover:text-[#EBA309] hover:border-b-1 pb-6">Home</a></li>
+                <li><a href="/" class="hover:text-[#EBA309] hover:border-b-1 pb-6">Home</a></li>
 
                 <!-- News link -->
-                <li><a href="#" class="hover:text-[#EBA309] hover:border-b-1 pb-6">News</a></li>
+                <li><a href="/news" class="hover:text-[#EBA309] hover:border-b-1 pb-6">News</a></li>
 
                 <!-- Game Info dropdown -->
                 <li class="relative group">
