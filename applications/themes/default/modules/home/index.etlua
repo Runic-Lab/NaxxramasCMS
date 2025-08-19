@@ -1,46 +1,13 @@
 <div class="min-h-screen">
+
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center pt-[70px] overflow-hidden">
-
-        <!-- Image background with overlay -->
-        <div class="absolute inset-0 bg-no-repeat bg-cover bg-center -z-10" 
-            style="background-image: url('https://cdn.discordapp.com/attachments/1344827438026461285/1404836980696547408/jwzd21zxohb61.png?ex=689fefa4&is=689e9e24&hm=06a2d69a5593236b52a246367a4b257e5520540f053b7754a7433114fb9d1d68&');">
-        </div>
-
-        <!-- Optional dark overlay for readability -->
-        <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.5);"></div>
-
-        <!-- Content -->
-        <div class="relative z-10 flex flex-col justify-start px-20">
-            <h1 class="text-6xl md:text-8xl font-medium mb-6 animate-fade-in">
-                Naxxramas
-            </h1>
-            <p class="text-gray-300 mb-8 leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur. Tellus pellentesque viverra iaculis dui quis ac fringilla blandit. Aliquet ut eu arcu nulla convallis tempor feugiat.
-            </p>
-            
-            <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#" class="orange-bg-red-button">sign up today</a>
-                <a href="#" class="orange-outline-button">learn more</a>
-            </div>
-        </div>
-        
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-                <div class="w-1 h-3 bg-red-400 rounded-full animate-bounce mt-2"></div>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- Server Stats Section -->
+    <% render("applications.themes.default.assets.widgets.hero_section") %>
+    
     <section class="relative py-20 bg-gray-900 backdrop-blur-sm">
 
         <!-- Image background with overlay -->
         <div class="absolute inset-0 bg-no-repeat bg-cover bg-center -z-10" 
-            style="background-image: url('https://cdn.discordapp.com/attachments/1344827438026461285/1404837846715727933/d0b43e31488c1b99029d.png?ex=689ff073&is=689e9ef3&hm=b915697a247e25750f7b47962f813f2a6769c23bdf08ab7ff91b380ccf076e6f&');">
+            style="background-image: url('https://i.ibb.co/q3TyB2WS/d0b43e31488c1b99029d.png');">
         </div>
 
         <!-- Statistics container -->
@@ -108,10 +75,10 @@
     <section class="relative py-20">
         <!-- Image background with overlay -->
         <div class="absolute inset-0 bg-no-repeat bg-cover bg-center -z-10" 
-            style="background-image: url('https://media.discordapp.net/attachments/1344827438026461285/1404837921864941628/thumb-1920-137002.png?ex=689ff085&is=689e9f05&hm=1daed2162443c7c104c0cf4225fd43ad3a2f1be6a8964dd824f4f0fbfeaa4f3d&=&format=webp&quality=lossless&width=1489&height=838');">
+            style="background-image: url('https://i.ibb.co/sJbr9vfS/thumb-1920-137002.png');">
         </div>
 
-        <div class="max-w-6xl mx-auto px-6 text-center">
+        <div class="max-w-xl mx-auto px-6 text-center">
             <div class="mb-16">
                 <h2 class="uppercase font-bold text-white text-4xl mb-2">Join us</h2>
             </div>
@@ -125,7 +92,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-[#100D0C] border border-[#7E7E7E] hover:boder-[#EBA309] p-6 shadow-md w-full md:w-1/3">
+                <div class="bg-[#100D0C] bg-opacity-70 border border-[#7E7E7E] p-6 shadow-md w-full md:w-1/3">
                     <h2 class="text-xl text-[#EBA309] font-bold mb-2">Card 2</h2>
                     <p class="text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Tortor ut velit ultricies facilisis</p>
                 </div>
@@ -138,16 +105,3 @@
             </div>
         </div>
     </section>
-
-
-
-<style>
-@keyframes fade-in {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fade-in {
-    animation: fade-in 1s ease-out;
-}
-</style>
