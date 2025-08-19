@@ -1,0 +1,32 @@
+<!-- News Card Link -->
+<a href="/news" class="relative w-full max-w-[1200px] mx-auto">
+
+  <!-- Card Container -->
+  <div 
+    class="relative w-full py-4 pr-4 pl-[460px] bg-[#191413] outline outline-gray-700 hover:outline hover:outline-[#EBA309]" 
+    style="height: 250px;"
+  >
+    <!-- News Image -->
+    <img 
+      src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/e8/E8WQFI083QTW1738635431840.png" 
+      alt="News Image" 
+      class="absolute left-0 top-0" 
+      style="height: 250px; width: auto;"
+    />
+
+    <!-- Text Content -->
+    <div>
+      <!-- Title -->
+      <h2 class="text-2xl pb-3 font-semibold text-yellow-500">Lorem ipsum</h2>
+
+      <!-- Description -->
+      <p class="mt-2 text-md text-neutral-400">
+        Lorem ipsum dolor sit amet consectetur. Porttitor pretium sit risus venenatis ut. 
+        Orci tortor ultrices viverra ut...
+      </p>
+    </div>
+
+    <!-- Date -->
+    <p class="absolute bottom-4 right-6 text-md text-neutral-600">13/08/2025</p>
+  </div>
+</a>
