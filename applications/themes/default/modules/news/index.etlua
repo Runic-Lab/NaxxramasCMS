@@ -1,0 +1,14 @@
+<div class="min-h-screen">
+
+    <!-- Hero Section -->
+    <% render("applications.themes.default.assets.widgets.hero_section") %>
+
+    <!-- News Section -->
+    <section class="flex flex-col px-8 py-20 max-w-[1200px] mx-auto">
+        <h2 class="uppercase text-2xl mb-8">news and updates</h2>
+
+        <% render("applications.themes.default.modules.news.latest_news") %>
+
+    </section>
+
+</div>
