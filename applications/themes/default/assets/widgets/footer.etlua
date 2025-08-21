@@ -1,11 +1,10 @@
-<footer class=" h-full text-[#7E7E7E] bg-[#100D0C] shadow-[0_-4px_6px_rgba(0,0,0,0.3)] px-20 bottom-0 left-0">
+<footer class=" h-full text-[#7E7E7E] bg-[#100D0C] shadow-[0_-4px_6px_rgba(0,0,0,0.3)] px-56 bottom-0 left-0">
 
     <div class="line-container">
         <div class="line-highlight"></div>
     </div>
 
-
-    <div class="flex flex-col justify-center items-center text-center py-10">
+    <div class="flex flex-col justify-center items-center text-center pt-10 pb-16">
         <a href="#"><img class="mr-12 h-16 font-bold text-white" src="https://i.ibb.co/PZ07mytj/Naxxramas-Logo-text.png"></img></a>
         <p class="pt-10">Lorem ipsum dolor sit amet consectetur. Consequat odio gravida fermentum egestas curabitur in dictum elit egestas. Sollicitudin pulvinar egestas  pulvinar egestas  pulvinar egestas augue non aliquam amet ferme</p>
     </div>
@@ -14,5 +13,5 @@
         <p>©2025 <a href="https://github.com/Runic-Lab/NaxxramasCMS" class="text-[#fff] hover:text-[#EBA309]">NaxxramasCMS</a>. All rights reserved.</p>
         <p>Proudly powered by <a href="https://github.com/Runic-Lab/NaxxramasCMS" class="text-[#fff] hover:text-[#EBA309]">NaxxramasCMS</a></p>
     </div>
-    
+
 </footer>
