@@ -1,0 +1,15 @@
+<% if locals and locals.news_list then %>
+    <% for i, news in pairs(locals.news_list) do %>
+
+        <% if route_name == "news" then %>
+            <% render("applications.themes.default.assets.widgets.card_news") %>
+        <% else %>
+            <% render("applications.themes.default.assets.widgets.card_home") %>
+        <% end %>
+
+    <% end %>
+<% else %>
+    <div class="col-span-full text-center py-12">
+        <p class="text-gray-400 text-lg">📰 Aucune actualité disponible pour le moment</p>
+    </div>
+<% end %>
