@@ -8,7 +8,7 @@ class News extends Model
 
     @get_latest: (limit) =>
         return News\select "ORDER BY created_at DESC LIMIT #{limit}"
-    
+
     @get_all: =>
         return News\select "ORDER BY created_at DESC"
 
@@ -23,6 +23,6 @@ class News extends Model
 
     get_slug: =>
         return @slug
-    
+
     get_created_at: =>
         return @created_at

@@ -11,7 +11,7 @@
         <title></title>
 
         <!-- Fonts and icons -->
-        
+
         <!-- App css -->
         <link href="/themes/default/assets/css/output.css" rel="stylesheet" />
         <link href="/themes/default/assets/css/style.css" rel="stylesheet" />
@@ -29,7 +29,7 @@
 
         <!-- Footer -->
         <% render("applications.themes.default.assets.widgets.footer") %>
-        
+
     </body>
 
     <!-- Javascript -->

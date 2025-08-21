@@ -65,7 +65,7 @@
   /** Buttons **/
   /* Solid orange background with red accents */
   .orange-bg-red-button {
-    @apply text-xl uppercase px-6 py-2 transition-colors duration-200 
+    @apply text-xl uppercase px-6 py-2 transition-colors duration-200
            bg-[#8A1E09] border border-[#EBA309] text-[#EBA309];
   }
 
