@@ -32,6 +32,23 @@
   p {
     font-size: var(--font-size-base);
   }
+
+  /* Pseudo-element line to Navbar */
+  .hover-underline-animation::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 0;
+      background-color: #EBA309;
+      transition: width 0.3s;
+  }
+
+  /* Hover to animate the line */
+  .hover-underline-animation:hover::after {
+      width: 100%;
+  }
 }
 
 @layer components {
