@@ -1,5 +1,5 @@
 <!-- News Card Link -->
-<a href="/news" class="relative w-full max-w-[1200px] mx-auto">
+<a href="/news" class="relative w-full">
   <!-- Card Container -->
   <div
     class="relative w-full h-[250px] py-4 pr-4 pl-[460px] bg-[#191413] outline outline-gray-700 hover:outline hover:outline-[#EBA309]"
