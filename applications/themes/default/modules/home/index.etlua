@@ -4,7 +4,7 @@
     <% render("applications.themes.default.assets.widgets.hero_section") %>
 
     <!-- Statistics Section -->
-    <section class="relative px-56 pt-24 flex flex-col">
+    <section class="relative px-56 pt-20 flex flex-col">
 
         <!-- Image background with overlay -->
         <div class="absolute inset-0 bg-no-repeat bg-cover bg-center -z-10"
@@ -75,7 +75,7 @@
             </div>
 
             <!-- News display -->
-            <div class="">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <% render(System.ThemeHelper:resolve("news", "latest"), { news_list = locals.news_list }) %>
             </div>
 
@@ -84,7 +84,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="relative py-56 px-56">
+    <section class="relative py-32 px-56">
 
         <!-- Image background with overlay -->
         <div class="absolute inset-0 bg-no-repeat bg-cover bg-center -z-10"
@@ -95,26 +95,26 @@
         <div class="text-center">
 
             <!-- Title -->
-            <div class="mb-16">
+            <div class="mb-32">
                 <h2 class="uppercase font-bold text-white text-4xl mb-2">Join us</h2>
             </div>
 
             <!-- Cards Container -->
             <div class="flex gap-6 justify-center">
                 <!-- Card 1 -->
-                <div class="bg-[#100D0C] bg-opacity-70 border border-[#7E7E7E] hover:border-[#EBA309] p-6">
+                <div class="bg-[#100D0C] bg-opacity-70 border border-gray-700 hover:border-[#EBA309] p-6">
                     <h2 class="text-xl text-[#EBA309] font-bold mb-2">Card 1</h2>
                     <p class="text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Tortor ut velit ultricies facilisis</p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-[#100D0C] bg-opacity-70 border border-[#7E7E7E] hover:border-[#EBA309] p-6">
+                <div class="bg-[#100D0C] bg-opacity-70 border border-gray-700 hover:border-[#EBA309] p-6">
                     <h2 class="text-xl text-[#EBA309] font-bold mb-2">Card 2</h2>
                     <p class="text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Tortor ut velit ultricies facilisis</p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-[#100D0C] bg-opacity-70 border border-[#7E7E7E] hover:border-[#EBA309] p-6">
+                <div class="bg-[#100D0C] bg-opacity-70 border border-gray-700 hover:border-[#EBA309] p-6">
                     <h2 class="text-xl text-[#EBA309] font-bold mb-2">Card 3</h2>
                     <p class="text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Tortor ut velit ultricies facilisis</p>
                 </div>
