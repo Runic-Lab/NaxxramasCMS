@@ -1,7 +1,7 @@
 <!-- Home card widget -->
-<a href="/" class="relative bg-gray-800 overflow-hidden shadow-2xl max-w-md w-full group">
+<a href="/" class="relative bg-gray-800 overflow-hidden w-full group">
    <!-- Image Container -->
-   <div class="relative overflow-hidden border border-[#7E7E7E] hover:boder-[#EBA309]">
+   <div class="relative overflow-hidden border border-gray-700 hover:border-[#EBA309]">
        <!-- Main Image -->
        <img
            src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/e8/E8WQFI083QTW1738635431840.png"
