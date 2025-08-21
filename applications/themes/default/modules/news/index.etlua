@@ -7,7 +7,7 @@
     <section class="flex flex-col px-56 py-20">
         <h2 class="uppercase text-2xl mb-8">news and updates</h2>
 
-        <% render("applications.themes.default.modules.news.latest_news") %>
+        <% render("applications.themes.default.modules.news.latest") %>
 
     </section>
 
