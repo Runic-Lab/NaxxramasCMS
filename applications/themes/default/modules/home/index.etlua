@@ -2,21 +2,24 @@
 
     <!-- Hero Section -->
     <% render("applications.themes.default.assets.widgets.hero_section") %>
-    
-    <section class="relative py-20 bg-gray-900 backdrop-blur-sm">
+
+    <!-- Statistics Section -->
+    <section class="relative px-56 pt-24 flex flex-col">
 
         <!-- Image background with overlay -->
-        <div class="absolute inset-0 bg-no-repeat bg-cover bg-center -z-10" 
+        <div class="absolute inset-0 bg-no-repeat bg-cover bg-center -z-10"
             style="background-image: url('https://i.ibb.co/q3TyB2WS/d0b43e31488c1b99029d.png');">
         </div>
 
-        <!-- Statistics container -->
-        <div class="relative z-10 max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-medium text-white mb-4">Statistics</h2>
+        <!-- Content -->
+        <div class="relative z-10 flex-1 flex flex-col justify-start">
+            <div class="text-center">
+                <h2 class="text-4xl font-medium text-white">Statistics</h2>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div class="h-px bg-[#363636] my-10"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 flex-1">
                 <!-- Online Players -->
                 <div class="transition-all duration-300 group">
                     <div class="text-center">
@@ -51,34 +54,47 @@
             </div>
         </div>
 
-        <div class="line-container absolute bottom-0">
+        <!-- Separator -->
+        <div class="line-container mt-24">
             <div class="line-highlight"></div>
         </div>
 
     </section>
 
+
     <!-- News Section -->
     <section class="body py-20">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="flex text-center mb-16">
-                <h2 class="uppercase font-bold text-white mr-2">news and updates</h2>
+
+        <!-- Content -->
+        <div class="px-56">
+
+            <!-- Titles and links -->
+            <div class="flex items-end text-center mb-8">
+                <h2 class="uppercase text-white mr-6">news and updates</h2>
                 <a href="#" class="text-[#EBA309] text-sm">All news</a>
             </div>
-            
+
+            <!-- News display -->
             <div class="">
                 <% render(System.ThemeHelper:resolve("news", "latest"), { news_list = locals.news_list }) %>
             </div>
+
         </div>
+
     </section>
 
-    <!-- News Section -->
-    <section class="relative py-20">
+    <!-- CTA Section -->
+    <section class="relative py-56 px-56">
+
         <!-- Image background with overlay -->
-        <div class="absolute inset-0 bg-no-repeat bg-cover bg-center -z-10" 
+        <div class="absolute inset-0 bg-no-repeat bg-cover bg-center -z-10"
             style="background-image: url('https://i.ibb.co/sJbr9vfS/thumb-1920-137002.png');">
         </div>
 
-        <div class="max-w-xl mx-auto px-6 text-center">
+        <!-- Content -->
+        <div class="text-center">
+
+            <!-- Title -->
             <div class="mb-16">
                 <h2 class="uppercase font-bold text-white text-4xl mb-2">Join us</h2>
             </div>
@@ -86,19 +102,19 @@
             <!-- Cards Container -->
             <div class="flex gap-6 justify-center">
                 <!-- Card 1 -->
-                <div class="bg-[#100D0C] bg-opacity-70 border border-[#7E7E7E] p-6 shadow-md w-full md:w-1/3">
+                <div class="bg-[#100D0C] bg-opacity-70 border border-[#7E7E7E] hover:border-[#EBA309] p-6">
                     <h2 class="text-xl text-[#EBA309] font-bold mb-2">Card 1</h2>
                     <p class="text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Tortor ut velit ultricies facilisis</p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-[#100D0C] bg-opacity-70 border border-[#7E7E7E] p-6 shadow-md w-full md:w-1/3">
+                <div class="bg-[#100D0C] bg-opacity-70 border border-[#7E7E7E] hover:border-[#EBA309] p-6">
                     <h2 class="text-xl text-[#EBA309] font-bold mb-2">Card 2</h2>
                     <p class="text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Tortor ut velit ultricies facilisis</p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-[#100D0C] bg-opacity-70 border border-[#7E7E7E] p-6 shadow-md w-full md:w-1/3">
+                <div class="bg-[#100D0C] bg-opacity-70 border border-[#7E7E7E] hover:border-[#EBA309] p-6">
                     <h2 class="text-xl text-[#EBA309] font-bold mb-2">Card 3</h2>
                     <p class="text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Tortor ut velit ultricies facilisis</p>
                 </div>
