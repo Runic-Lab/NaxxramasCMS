@@ -1,56 +1,61 @@
 <div class="min-h-screen">
 
     <!-- Hero Section -->
-    <% render("applications.themes.default.assets.widgets.hero_section") %>
+    <header>
+        <% render("applications.themes.default.assets.widgets.hero_section") %>
+    </header>
 
     <!-- Statistics Section -->
-    <section class="relative px-56 pt-20 flex flex-col">
+    <section class="relative px-56 pt-20 flex flex-col" aria-labelledby="statistics-title">
 
-        <!-- Image background with overlay -->
+        <!-- Background image with fixed parallax effect -->
         <div class="absolute inset-0 bg-fixed bg-no-repeat bg-cover bg-center -z-10"
             style="background-image: url('https://i.ibb.co/q3TyB2WS/d0b43e31488c1b99029d.png');">
         </div>
 
-        <!-- Content -->
+        <!-- Statistics Content -->
         <div class="relative z-10 flex-1 flex flex-col justify-start">
             <div class="text-center">
-                <h2 class="text-4xl font-medium text-white">Statistics</h2>
+                <h2 id="statistics-title" class="text-4xl font-medium text-white">Statistics</h2>
             </div>
 
-            <div class="h-px bg-[#363636] my-10"></div>
+            <!-- Separator -->
+            <hr class="h-px bg-[#363636] my-10 border-0">
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 flex-1">
+
                 <!-- Online Players -->
-                <div class="transition-all duration-300 group">
-                    <div class="text-center">
-                        <div class="text-2xl font-bold mb-2 group-hover:scale-110 transition-transform">1</div>
-                        <div class="text-lg">Online players</div>
+                <article class="transition-all duration-300 group text-center">
+                    <div>
+                        <p class="text-2xl font-bold mb-2 group-hover:scale-110 transition-transform">1</p>
+                        <p class="text-lg">Online players</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Server Status -->
-                <div class="transition-all duration-300 group">
-                    <div class="text-center">
-                        <div class="text-2xl text-green-700 font-bold mb-2 group-hover:scale-110 transition-transform">Online</div>
-                        <div class="text-lg">State of the kingdom</div>
+                <article class="transition-all duration-300 group text-center">
+                    <div>
+                        <p class="text-2xl text-green-700 font-bold mb-2 group-hover:scale-110 transition-transform">Online</p>
+                        <p class="text-lg">State of the kingdom</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Alliance -->
-                <div class="transition-all duration-300 group">
-                    <div class="text-center">
-                        <div class="text-2xl font-bold mb-2 group-hover:scale-110 transition-transform">100%</div>
-                        <div class="text-blue-700 text-lg">Alliance</div>
+                <article class="transition-all duration-300 group text-center">
+                    <div>
+                        <p class="text-2xl font-bold mb-2 group-hover:scale-110 transition-transform">100%</p>
+                        <p class="text-blue-700 text-lg">Alliance</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Horde -->
-                <div class="transition-all duration-300 group">
-                    <div class="text-center">
-                        <div class="text-2xl font-bold mb-2 group-hover:scale-110 transition-transform">0%</div>
-                        <div class="text-red-800 text-lg">Horde</div>
+                <article class="transition-all duration-300 group text-center">
+                    <div>
+                        <p class="text-2xl font-bold mb-2 group-hover:scale-110 transition-transform">0%</p>
+                        <p class="text-red-800 text-lg">Horde</p>
                     </div>
-                </div>
+                </article>
+
             </div>
         </div>
 
@@ -62,30 +67,27 @@
     </section>
 
     <!-- News Section -->
-    <section class="body py-20">
-
-        <!-- Content -->
+    <section class="body py-20" aria-labelledby="news-title">
         <div class="px-56">
 
-            <!-- Titles and links -->
+            <!-- Section title and link -->
             <div class="flex items-end text-center mb-8">
-                <h2 class="uppercase text-white mr-6">news and updates</h2>
+                <h2 id="news-title" class="uppercase text-white mr-6">news and updates</h2>
                 <a href="#" class="text-[#EBA309] text-sm">All news</a>
             </div>
 
-            <!-- News display -->
+            <!-- News grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <% render(System.ThemeHelper:resolve("news", "latest"), { news_list = locals.news_list }) %>
             </div>
 
         </div>
-
     </section>
 
     <!-- CTA Section -->
-    <section class="relative py-32 px-56">
+    <section class="relative py-32 px-56" aria-labelledby="cta-title">
 
-        <!-- Image background with overlay -->
+        <!-- Background image with fixed parallax -->
         <div class="absolute inset-0 bg-fixed bg-no-repeat bg-cover bg-center -z-10"
             style="background-image: url('https://i.ibb.co/sJbr9vfS/thumb-1920-137002.png');">
         </div>
@@ -93,30 +95,31 @@
         <!-- Content -->
         <div class="text-center">
 
-            <!-- Title -->
+            <!-- Section Title -->
             <div class="mb-32">
-                <h2 class="uppercase font-bold text-white text-4xl mb-2">Join us</h2>
+                <h2 id="cta-title" class="uppercase font-bold text-white text-4xl mb-2">Join us</h2>
             </div>
 
-            <!-- Cards Container -->
+            <!-- CTA Cards -->
             <div class="flex gap-6 justify-center">
-                <!-- Card 1 -->
-                <div class="bg-[#100D0C] bg-opacity-70 border border-gray-700 hover:border-[#EBA309] p-6">
-                    <h2 class="text-xl text-[#EBA309] font-bold mb-2">Card 1</h2>
-                    <p class="text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Tortor ut velit ultricies facilisis</p>
-                </div>
 
-                <!-- Card 2 -->
-                <div class="bg-[#100D0C] bg-opacity-70 border border-gray-700 hover:border-[#EBA309] p-6">
-                    <h2 class="text-xl text-[#EBA309] font-bold mb-2">Card 2</h2>
+                <article class="bg-[#100D0C] bg-opacity-70 border border-gray-700 hover:border-[#EBA309] p-6">
+                    <h3 class="text-xl text-[#EBA309] font-bold mb-2">Card 1</h3>
                     <p class="text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Tortor ut velit ultricies facilisis</p>
-                </div>
+                </article>
 
-                <!-- Card 3 -->
-                <div class="bg-[#100D0C] bg-opacity-70 border border-gray-700 hover:border-[#EBA309] p-6">
-                    <h2 class="text-xl text-[#EBA309] font-bold mb-2">Card 3</h2>
+                <article class="bg-[#100D0C] bg-opacity-70 border border-gray-700 hover:border-[#EBA309] p-6">
+                    <h3 class="text-xl text-[#EBA309] font-bold mb-2">Card 2</h3>
                     <p class="text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Tortor ut velit ultricies facilisis</p>
-                </div>
+                </article>
+
+                <article class="bg-[#100D0C] bg-opacity-70 border border-gray-700 hover:border-[#EBA309] p-6">
+                    <h3 class="text-xl text-[#EBA309] font-bold mb-2">Card 3</h3>
+                    <p class="text-[#7E7E7E]">Lorem ipsum dolor sit amet consectetur. Tortor ut velit ultricies facilisis</p>
+                </article>
+
             </div>
         </div>
     </section>
+
+</div>

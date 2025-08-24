@@ -5,7 +5,7 @@
         style="background-image: url('https://i.ibb.co/zVpx3j34/jwzd21zxohb61.png');">
     </div>
 
-    <!-- Optional dark overlay for readability -->
+    <!-- Optional dark overlay -->
     <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.5);"></div>
 
     <!-- Content -->
@@ -25,7 +25,7 @@
     </div>
 
     <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2" aria-hidden="true">
         <div class="w-6 h-10 border-2 border-[#7E7E7E] rounded-full flex justify-center">
             <div class="w-1 h-3 bg-[#EBA309] rounded-full animate-bounce mt-2"></div>
         </div>

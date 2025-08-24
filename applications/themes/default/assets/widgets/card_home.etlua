@@ -1,31 +1,34 @@
-<!-- Home card widget -->
-<a href="/" class="relative bg-gray-800 overflow-hidden w-full group">
-   <!-- Image Container -->
-   <div class="relative overflow-hidden border border-gray-700 hover:border-[#EBA309]">
-       <!-- Main Image -->
-       <img
-           src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/e8/E8WQFI083QTW1738635431840.png"
-           alt="Game Image"
-           class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-       >
+<article class="relative w-full">
+    <a href="/" class="relative bg-gray-800 overflow-hidden w-full group">
 
-       <!-- Content Overlay -->
-       <div class="absolute inset-0 flex flex-col justify-between p-4 z-10">
-           <!-- Top Spacer -->
-           <div></div>
+        <!-- Image Container -->
+        <div class="relative overflow-hidden border border-gray-700 hover:border-[#EBA309]">
 
-           <!-- Bottom Content -->
-           <div class="space-y-3">
-               <!-- Date -->
-               <div class="text-[#7E7E7E]">
-                   15/08/25
-               </div>
+            <!-- Main Image -->
+            <img
+                src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/e8/E8WQFI083QTW1738635431840.png"
+                alt="Screenshot from World of Warcraft"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            >
 
-               <!-- Title -->
-               <h3 class="text-[#EBA309] text-xl font-bold">
-                   World of Warcraft
-               </h3>
-           </div>
-       </div>
-   </div>
-</a>
+            <!-- Content Overlay -->
+            <div class="absolute inset-0 flex flex-col justify-between p-4 z-10">
+                <!-- Top Spacer -->
+                <div></div>
+
+                <!-- Bottom Content -->
+                <div class="space-y-3">
+                    <!-- Date -->
+                    <time class="text-[#7E7E7E]" datetime="2025-08-15">
+                        15/08/25
+                    </time>
+
+                    <!-- Title -->
+                    <h3 class="text-[#EBA309] text-xl font-bold">
+                        World of Warcraft
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </a>
+</article>
