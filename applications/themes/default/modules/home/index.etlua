@@ -7,7 +7,7 @@
     <section class="relative px-56 pt-20 flex flex-col">
 
         <!-- Image background with overlay -->
-        <div class="absolute inset-0 bg-no-repeat bg-cover bg-center -z-10"
+        <div class="absolute inset-0 bg-fixed bg-no-repeat bg-cover bg-center -z-10"
             style="background-image: url('https://i.ibb.co/q3TyB2WS/d0b43e31488c1b99029d.png');">
         </div>
 
@@ -86,7 +86,7 @@
     <section class="relative py-32 px-56">
 
         <!-- Image background with overlay -->
-        <div class="absolute inset-0 bg-no-repeat bg-cover bg-center -z-10"
+        <div class="absolute inset-0 bg-fixed bg-no-repeat bg-cover bg-center -z-10"
             style="background-image: url('https://i.ibb.co/sJbr9vfS/thumb-1920-137002.png');">
         </div>
 
