@@ -6,11 +6,11 @@
 
         <!-- If we are on the "news" page, render the "card_news" widget -->
         <% if route_name == "news" then %>
-            <% render("applications.themes.default.assets.widgets.card_news") %>
+            <% render("applications.themes.default.assets.widgets.card_news", {news = news}) %>
 
         <!-- Otherwise, render the "card_home" widget -->
         <% else %>
-            <% render("applications.themes.default.assets.widgets.card_home") %>
+            <% render("applications.themes.default.assets.widgets.card_home", {news = news}) %>
         <% end %>
 
     <% end %>
