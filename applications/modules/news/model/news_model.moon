@@ -12,6 +12,9 @@ class News extends Model
     @get_all: =>
         return News\select "ORDER BY created_at DESC"
 
+    @get_by_slug: (slug) =>
+        return News\select "WHERE slug = '#{slug}'"
+
     get_id: =>
         return @id
 
