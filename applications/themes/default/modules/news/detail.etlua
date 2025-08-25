@@ -1,0 +1,11 @@
+<div class="min-h-screen px-56 py-20">
+    <% if locals and locals.news then %>
+        <h1 class="text-3xl font-bold mb-6"><%= locals.news:get_title() %></h1>
+        <p class="text-gray-500 mb-4">Publish at <%= locals.news:get_created_at() %></p>
+        <div class="prose max-w-none">
+            <%= locals.news:get_content() %>
+        </div>
+    <% else %>
+        <p class="text-gray-400">⚠️ This news item does not exist</p>
+    <% end %>
+</div>
