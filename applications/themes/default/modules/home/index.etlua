@@ -73,7 +73,7 @@
             <!-- Section title and link -->
             <div class="flex items-end text-center mb-8">
                 <h2 id="news-title" class="uppercase text-white mr-6">news and updates</h2>
-                <a href="#" class="text-[#EBA309] text-sm">All news</a>
+                <a href="/news" class="text-[#EBA309] text-sm">All news</a>
             </div>
 
             <!-- News grid -->
