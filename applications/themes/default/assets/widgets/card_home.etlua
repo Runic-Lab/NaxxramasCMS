@@ -1,5 +1,5 @@
 <article class="relative w-full">
-    <a href="/" class="relative bg-gray-800 overflow-hidden w-full group">
+    <a href="/news/<%= news:get_slug() %>" class="relative bg-gray-800 overflow-hidden w-full group">
 
         <!-- Image Container -->
         <div class="relative overflow-hidden border border-gray-700 hover:border-[#EBA309]">
@@ -19,13 +19,13 @@
                 <!-- Bottom Content -->
                 <div class="space-y-3">
                     <!-- Date -->
-                    <time class="text-[#7E7E7E]" datetime="2025-08-15">
-                        15/08/25
+                    <time class="text-[#7E7E7E]" datetime="<%= news:get_created_at() %>">
+                        <%= news:get_created_at() %>
                     </time>
 
                     <!-- Title -->
                     <h3 class="text-[#EBA309] text-xl font-bold">
-                        World of Warcraft
+                        <%= news:get_title() %>
                     </h3>
                 </div>
             </div>
