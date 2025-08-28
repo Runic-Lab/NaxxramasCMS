@@ -1,11 +1,54 @@
-<div class="min-h-screen px-56 py-20">
-    <% if locals and locals.news then %>
-        <h1 class="text-3xl font-bold mb-6"><%= locals.news:get_title() %></h1>
-        <p class="text-gray-500 mb-4">Publish at <%= locals.news:get_created_at() %></p>
-        <div class="prose max-w-none">
-            <%= locals.news:get_content() %>
+<div>
+    <section class="relative h-screen flex items-center pt-[70px] overflow-hidden px-56">
+
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-fixed bg-cover bg-center -z-20"
+            style="background-image: url('https://i.ibb.co/sJbr9vfS/thumb-1920-137002.png');">
         </div>
-    <% else %>
-        <p class="text-gray-400">⚠️ This news item does not exist</p>
-    <% end %>
+
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-black/50 -z-10"></div>
+
+        <% if locals and locals.news then %>
+            <!-- Content -->
+            <div class="relative z-10 flex flex-col justify-start max-w-4xl animate-fade-in">
+                <h1 class="text-6xl md:text-8xl font-medium mb-6 text-white">
+                    <%= locals.news:get_title() %>
+                </h1>
+                <p class="text-gray-300 mb-8 leading-relaxed">
+                    Published at <%= locals.news:get_created_at() %>
+                </p>
+                <div class="prose max-w-none text-white">
+                    <%= locals.news:get_content() %>
+                </div>
+            </div>
+        <% else %>
+            <p class="text-gray-400 mt-8 relative z-10">⚠️ This news item does not exist</p>
+        <% end %>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2" aria-hidden="true">
+            <div class="w-6 h-10 border-2 border-[#7E7E7E] rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-[#EBA309] rounded-full animate-bounce mt-2"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Blog section -->
+    <section class="body my-10 px-56">
+        <!-- Blog -->
+        <acticle class="">
+            <!-- Details -->
+            <div>
+                <p class="my-5">Bienvenue chez vous !</p>
+                <p class="my-5">Ou plutôt, bienvenue dans le quartier !</p>
+                <p class="my-5">Pour l’instant, notre série d’articles sur la fonctionnalité de housing dans <i>World of Warcraft</i> n’a abordé que sur la philosophie du système, les décorations présentes et les récompenses à la clé. Il est grand temps de parler des quartiers ! Nous en avions brièvement parlé lors de notre première publication sur le système, et maintenant, il est grand temps d’aborder en détail les caractéristiques des quartiers !</p>
+                <p class="my-5">Avant toute chose, un petit message d’avertissement. Les quartiers sont une fonctionnalité en cours de développement. Les noms, images, calendrier et autres éléments présentés dans cet article pourraient subir des modifications d’ici la sortie officielle du housing. En partageant ces informations au préalable, nous souhaitons principalement recueillir vos commentaires et retours, alors n’hésitez pas à nous en faire part !</p>
+                <h3 class="text-[#EBA309] font-bold text-lg my-5">Cette terre vous appartient</h3>
+            </div>
+        </acticle>
+    </section>
+
+
 </div>

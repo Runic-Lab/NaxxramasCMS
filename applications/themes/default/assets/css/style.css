@@ -3,12 +3,14 @@
 /* Design system definitions */
 @theme {
     --color-body: #100D0C;
+    --color-font-p: #EBDEC2;
     --color-font-white: #fff;
     --color-font-gold: #EBA309;
     --color-bg-red-button: #8A1E09;
     --color-orange-outline-button: #EBA309;
 
     --font-size-base: 16px;
+    --font-lg-base: 20px;
 }
 
 @layer base {
@@ -31,6 +33,7 @@
     /* Paragraphs White, 16px */
     p {
         font-size: var(--font-size-base);
+        color: var(--color-font-p);
     }
 
     /* Pseudo-element line to Navbar */
