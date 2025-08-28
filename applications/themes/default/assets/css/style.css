@@ -2,84 +2,82 @@
 
 /* Design system definitions */
 @theme {
-  --color-body: #100D0C;
-  --color-font-white: #fff;
-  --color-font-gold: #EBA309;
-  --color-bg-red-button: #8A1E09;
-  --color-orange-outline-button: #EBA309;
+    --color-body: #100D0C;
+    --color-font-white: #fff;
+    --color-font-gold: #EBA309;
+    --color-bg-red-button: #8A1E09;
+    --color-orange-outline-button: #EBA309;
 
-  --font-size-base: 16px;
+    --font-size-base: 16px;
 }
 
 @layer base {
 
-  /* Body Brown */
-  body {
-    background-color: var(--color-body);
-    color: var(--color-font-white);
-  }
+    /* Body Brown */
+    body {
+        background-color: var(--color-body);
+        color: var(--color-font-white);
+    }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: var(--color-font-white);
-  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--color-font-white);
+    }
 
-  /* Paragraphs White, 16px */
-  p {
-    font-size: var(--font-size-base);
-  }
+    /* Paragraphs White, 16px */
+    p {
+        font-size: var(--font-size-base);
+    }
 
-  /* Pseudo-element line to Navbar */
-  .hover-underline-animation::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 1px;
-      width: 0;
-      background-color: #EBA309;
-      transition: width 0.3s;
-  }
+    /* Pseudo-element line to Navbar */
+    .hover-underline-animation::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 0;
+        background-color: #EBA309;
+        transition: width 0.3s;
+    }
 
-  /* Hover to animate the line */
-  .hover-underline-animation:hover::after {
-      width: 100%;
-  }
+    /* Hover to animate the line */
+    .hover-underline-animation:hover::after {
+        width: 100%;
+    }
 }
 
 @layer components {
 
-  /** Gradient line container **/
-  .line-container {
-    @apply relative w-full h-px bg-gradient-to-r from-transparent via-[#363636] to-transparent;
-  }
+    /** Gradient line container **/
+    .line-container {
+        @apply relative w-full h-px bg-gradient-to-r from-transparent via-[#363636] to-transparent;
+    }
 
-  .line-highlight {
-    @apply absolute h-px w-1/6 left-0 ml-[82px] bg-gradient-to-r from-transparent via-[#EBA309] to-transparent;
-  }
+    .line-highlight {
+        @apply absolute h-px w-1/6 left-0 ml-[82px] bg-gradient-to-r from-transparent via-[#EBA309] to-transparent;
+    }
 
-  /** Buttons **/
-  /* Solid orange background with red accents */
-  .orange-bg-red-button {
-    @apply text-xl uppercase px-6 py-2 transition-colors duration-200
-           bg-[#8A1E09] border border-[#EBA309] text-[#EBA309];
-  }
+    /** Buttons **/
+    /* Solid orange background with red accents */
+    .orange-bg-red-button {
+        @apply text-xl uppercase px-6 py-2 transition-colors duration-200 bg-[#8A1E09] border border-[#EBA309] text-[#EBA309];
+    }
 
-  .orange-bg-red-button:hover {
-    @apply bg-[#a12b15] border-[#FFCC33];
-  }
+    .orange-bg-red-button:hover {
+        @apply bg-[#a12b15] border-[#FFCC33];
+    }
 
-  /* Outline button with semi-transparent background */
-  .orange-outline-button {
-    @apply text-xl uppercase px-6 py-2 transition-colors duration-200
-           bg-[rgba(16,13,12,0.4)] border border-[#EBA309] text-[#EBA309];
-  }
+    /* Outline button with semi-transparent background */
+    .orange-outline-button {
+        @apply text-xl uppercase px-6 py-2 transition-colors duration-200 bg-[rgba(16, 13, 12, 0.4)] border border-[#EBA309] text-[#EBA309];
+    }
 
-  .orange-outline-button:hover {
-    @apply bg-[rgba(235,163,9,0.2)] border-[#FFCC33];
-  }
+    .orange-outline-button:hover {
+        @apply bg-[rgba(235, 163, 9, 0.2)] border-[#FFCC33];
+    }
 }
