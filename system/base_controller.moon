@@ -94,6 +94,23 @@ class BaseController
                 unless is_valid
                     errors[param_name] = custom_message or "#{param_name} is invalid"
 
+            clean_url = (url) ->
+                return "" unless url and type(url) = "string"
+                url = url\gsub(" ", "-")
+                cleaned = url\gsub("[^%w%-%.%/_]", "")
+
+            if rule.config.url and type(rule_config.url) == "function"
+                raw_url = tostring(value)
+                clean_url_value = clean_url(raw_url)
+
+                if clean_url_value == ""
+                    errors[param_name] = "url invalide"
+                else
+
+                    is_valid, custom_message = rule_config.url(clean_url_value)
+                    unless is_valid
+                        errors[param_name] = custom_message or "#{param_name} is invalid"
+
         success = next(errors) == nil
         return success, errors
 
