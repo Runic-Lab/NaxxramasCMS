@@ -52,6 +52,64 @@
     .hover-underline-animation:hover::after {
         width: 100%;
     }
+
+    .article-content {
+        line-height: 1.8;
+        color: var(--color-font-p);
+    }
+
+    .article-content h2 {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: #EBA309;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #EBA309;
+        padding-bottom: 0.5rem;
+    }
+
+    .article-content h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #EBA309;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .article-content h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #fff;
+        margin-top: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .article-content p {
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+
+    .article-content strong {
+        font-weight: 700;
+        color: var(--color-font-p);
+    }
+
+    .article-content ul {
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+        list-style-type: disc;
+    }
+
+    .article-content li {
+        margin-bottom: 0.5rem;
+        padding-left: 0.25rem;
+    }
+
+    .article-content hr {
+        border: none;
+        border-top: 1px solid #d1d5db;
+        margin: 2rem 0;
+    }
 }
 
 @layer components {
