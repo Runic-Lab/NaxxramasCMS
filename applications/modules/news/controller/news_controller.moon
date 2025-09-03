@@ -34,12 +34,9 @@ class NewsController extends System.BaseController
             ["slug"]: {
                 validator: (value) ->
                     if string.find value, "'"
-                        return false, "caractere invalide detecter"
+                        return false, "invalid character"
             }
         }
-
-        -- if errors["slug"]
-        --     error errors["slug"]
 
         news_item = NewsModel\get_by_slug slug
         application.locals = {
