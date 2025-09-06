@@ -40,6 +40,34 @@ class BaseController
         
         mediator\register_module module_name, handlers if next(handlers)
         return @
+
+    clean_url: (url) =>
+        return "" unless url and type(url) == "string"
+        url = url\gsub(" ", "-")
+        cleaned = url\gsub("[^%w%-%.%/_]", "")
+        return cleaned
+
+    validate_slug: (slug) =>
+        return false, "slug is required" unless slug and slug != ""
+
+        if string.find slug, "'"
+            return false, "invalid character: single quote not allowed"
+
+        if slug\match("%.%.")
+            return false, "path traversal attempt detected"
+
+        if #slug > 100
+            return false, "slug to long"
+
+        if not slug\match("^[%w%-%.%/_]+$")
+            return false, "slug contains invalid characters"
+
+        clean_slug = @clean_url slug
+
+        if clean_slug == ""
+            return false, "slug invalid after cleaning"
+
+        return true, clean_slug
     
     validate_params: (params, rules) =>
         errors = {}

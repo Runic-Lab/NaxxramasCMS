@@ -30,13 +30,16 @@ class NewsController extends System.BaseController
 
     detail: (application) =>
         slug = application.params.slug
-        success, errors = @\validate_params {slug: slug}, {
-            ["slug"]: {
-                validator: (value) ->
-                    if string.find value, "'"
-                        return false, "invalid character"
+        is valid, result = @validate_slug
+
+        unless is_valid
+            application.locals = {
+                error: result
+                status: 400
             }
-        }
+            return @render_view "error"
+
+        clean_slug = result
 
         news_item = NewsModel\get_by_slug slug
         application.locals = {
