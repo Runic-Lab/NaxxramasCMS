@@ -2,7 +2,7 @@
     <a href="/news/<%= news:get_slug() %>" class="relative w-full">
 
         <!-- Card Container -->
-        <div class="relative w-full h-[250px] py-4 pr-4 pl-[460px] bg-[#191413] outline outline-gray-700 hover:outline hover:outline-[#EBA309]">
+        <div class="relative w-full h-[250px] py-4 pr-10 pl-[460px] bg-[#191413] outline outline-gray-700 hover:outline hover:outline-[#EBA309]">
 
             <!-- News Image -->
             <img
@@ -17,8 +17,13 @@
                 <h2 class="text-2xl pb-3 font-semibold text-yellow-500"><%= news:get_title() %></h2>
 
                 <!-- Description -->
-                <p class="mt-2 text-md text-neutral-400">
-                    <%- news:get_content() %>
+                <p class="mt-2 text-md text-neutral-400 overflow-hidden">
+                    <% local content = news:get_content() or "" %>
+                    <% if #content > 50 then %>
+                        <%- content:sub(1, 350) %>...
+                    <% else %>
+                        <%- content %>
+                    <% end %>
                 </p>
             </div>
 
