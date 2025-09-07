@@ -1,0 +1,32 @@
+<article class="relative w-full">
+    <a href="/news/<%= news:get_slug() %>" class="relative w-full">
+
+        <!-- Card Container -->
+        <div class="relative w-full h-[250px] py-4 pr-4 pl-[460px] bg-[#191413] outline outline-gray-700 hover:outline hover:outline-[#EBA309]">
+
+            <!-- News Image -->
+            <img
+                src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/e8/E8WQFI083QTW1738631840.png"
+                alt="Thumbnail of the news article"
+                class="absolute left-0 top-0 h-[250px] w-auto"
+            />
+
+            <!-- Text Content -->
+            <div>
+                <!-- Title -->
+                <h2 class="text-2xl pb-3 font-semibold text-yellow-500"><%= news:get_title() %></h2>
+
+                <!-- Description -->
+                <p class="mt-2 text-md text-neutral-400">
+                    <%- news:get_content() %>
+                </p>
+            </div>
+
+            <!-- Date -->
+            <time class="absolute bottom-4 right-6 text-md text-neutral-600" datetime="2025-08-13">
+                <%= news:get_created_at() %>
+            </time>
+
+        </div>
+    </a>
+</article>

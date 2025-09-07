@@ -1,0 +1,25 @@
+<div class="min-h-screen">
+
+    <!-- Render the Hero widget section -->
+    <% render("applications.themes.default.assets.widgets.hero_section") %>
+
+    <!-- News Section -->
+    <section class="flex flex-col px-56 py-20">
+        <!-- Title -->
+        <h2 class="uppercase text-2xl mb-8">news and updates</h2>
+
+        <% if locals and locals.news_list then %>
+            <% for i, news in pairs(locals.news_list) do %>
+                <% render("applications.themes.default.assets.widgets.card_news", {news = news}) %>
+            <% end %>
+
+        <% else %>
+            <div class="col-span-full text-center py-12">
+                <p class="text-gray-400 text-lg">📰 No news available at the moment</p>
+            </div>
+        <% end %>
+
+
+    </section>
+
+</div>

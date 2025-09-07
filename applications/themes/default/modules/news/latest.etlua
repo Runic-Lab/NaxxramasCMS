@@ -1,45 +1,23 @@
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <% if locals and locals.news_list then %>
-        <% for i, news in pairs(locals.news_list) do %>
-            <article class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-gray-700 hover:border-red-500 transition-all duration-300 group shadow-lg">
-                <!-- Image -->
-                <div class="h-48 overflow-hidden relative">
-                    <img 
-                        src="https://images.blz-contentstack.com/v3/assets/blt3452e3b114fab0cd/blt6d9cfe7f47d6cf2d/5dc8a5dd1cbb38016bd3d8a5/Wallpaper_Naxxramas_2560x1440.jpg" 
-                        alt="<%= news:get_title() %>"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    >
-                    <!-- Overlay gradient -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    
-                    <!-- Date badge -->
-                    <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        <%= news:get_created_at() %>
-                    </div>
-                </div>
+<!-- Check if a news list exists -->
+<% if locals and locals.news_list then %>
 
-                <!-- Content -->
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors">
-                        <%= news:get_title() %>
-                    </h3>
-                    <p class="text-gray-300 text-sm mb-4 leading-relaxed line-clamp-3">
-                        <%= news:get_content() %>
-                    </p>
-                    
-                    <!-- Read more button -->
-                    <button class="inline-flex items-center text-red-400 hover:text-red-300 text-sm font-medium transition-colors">
-                        Lire la suite 
-                        <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                </div>
-            </article>
+    <!-- Loop through each news item in the list -->
+    <% for i, news in pairs(locals.news_list) do %>
+
+        <!-- If we are on the "news" page, render the "card_news" widget -->
+        <% if route_name == "news" then %>
+            <% render("applications.themes.default.assets.widgets.card_news", {news = news}) %>
+
+        <!-- Otherwise, render the "card_home" widget -->
+        <% else %>
+            <% render("applications.themes.default.assets.widgets.card_home", {news = news}) %>
         <% end %>
-    <% else %>
-        <div class="col-span-full text-center py-12">
-            <p class="text-gray-400 text-lg">📰 Aucune actualité disponible pour le moment</p>
-        </div>
+
     <% end %>
-</div>
+
+<!-- If no news is available, show a message -->
+<% else %>
+    <div class="col-span-full text-center py-12">
+        <p class="text-gray-400 text-lg">📰 No news available at the moment</p>
+    </div>
+<% end %>

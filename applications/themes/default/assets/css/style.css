@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+/* Design system definitions */
+@theme {
+    --color-body: #100D0C;
+    --color-font-p: #EBDEC2;
+    --color-font-white: #fff;
+    --color-font-gold: #EBA309;
+    --color-bg-red-button: #8A1E09;
+    --color-orange-outline-button: #EBA309;
+
+    --font-size-base: 16px;
+    --font-lg-base: 20px;
+}
+
+@layer base {
+
+    /* Body Brown */
+    body {
+        background-color: var(--color-body);
+        color: var(--color-font-white);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--color-font-white);
+    }
+
+    /* Paragraphs White, 16px */
+    p {
+        font-size: var(--font-size-base);
+        color: var(--color-font-p);
+    }
+
+    /* Pseudo-element line to Navbar */
+    .hover-underline-animation::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 0;
+        background-color: #EBA309;
+        transition: width 0.3s;
+    }
+
+    /* Hover to animate the line */
+    .hover-underline-animation:hover::after {
+        width: 100%;
+    }
+
+    .article-content {
+        line-height: 1.8;
+        color: var(--color-font-p);
+    }
+
+    .article-content h2 {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: #EBA309;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #EBA309;
+        padding-bottom: 0.5rem;
+    }
+
+    .article-content h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #EBA309;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .article-content h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #fff;
+        margin-top: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .article-content p {
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+
+    .article-content strong {
+        font-weight: 700;
+        color: var(--color-font-p);
+    }
+
+    .article-content ul {
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+        list-style-type: disc;
+    }
+
+    .article-content li {
+        margin-bottom: 0.5rem;
+        padding-left: 0.25rem;
+    }
+
+    .article-content hr {
+        border: none;
+        border-top: 1px solid #d1d5db;
+        margin: 2rem 0;
+    }
+}
+
+@layer components {
+
+    /** Gradient line container **/
+    .line-container {
+        @apply relative w-full h-px bg-gradient-to-r from-transparent via-[#363636] to-transparent;
+    }
+
+    .line-highlight {
+        @apply absolute h-px w-1/6 left-0 ml-[82px] bg-gradient-to-r from-transparent via-[#EBA309] to-transparent;
+    }
+
+    /** Buttons **/
+    /* Solid orange background with red accents */
+    .orange-bg-red-button {
+        @apply text-xl uppercase px-6 py-2 transition-colors duration-200 bg-[#8A1E09] border border-[#EBA309] text-[#EBA309];
+    }
+
+    .orange-bg-red-button:hover {
+        @apply bg-[#a12b15] border-[#FFCC33];
+    }
+
+    /* Outline button with semi-transparent background */
+    .orange-outline-button {
+        @apply text-xl uppercase px-6 py-2 transition-colors duration-200 bg-[rgba(16, 13, 12, 0.4)] border border-[#EBA309] text-[#EBA309];
+    }
+
+    .orange-outline-button:hover {
+        @apply bg-[rgba(235, 163, 9, 0.2)] border-[#FFCC33];
+    }
+}

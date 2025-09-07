@@ -3,6 +3,7 @@ NewsModel = require "applications.modules.news.model.news_model"
 class NewsController extends System.BaseController
     @\action "latest"
     @\action "index"
+    @\action "detail"
 
     latest: (application, limit) =>
         limit or= 1
@@ -26,5 +27,25 @@ class NewsController extends System.BaseController
         }
 
         return @render_view "index"
+
+    detail: (application) =>
+        slug = application.params.slug
+        is valid, result = @validate_slug
+
+        unless is_valid
+            application.locals = {
+                error: result
+                status: 400
+            }
+            return @render_view "error"
+
+        clean_slug = result
+
+        news_item = NewsModel\get_by_slug slug
+        application.locals = {
+            news: news_item[1]
+        }
+
+        return @render_view "detail"
 
 NewsController!\register_as "news"

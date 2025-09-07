@@ -40,6 +40,34 @@ class BaseController
         
         mediator\register_module module_name, handlers if next(handlers)
         return @
+
+    clean_url: (url) =>
+        return "" unless url and type(url) == "string"
+        url = url\gsub(" ", "-")
+        cleaned = url\gsub("[^%w%-%.%/_]", "")
+        return cleaned
+
+    validate_slug: (slug) =>
+        return false, "slug is required" unless slug and slug != ""
+
+        if string.find slug, "'"
+            return false, "invalid character: single quote not allowed"
+
+        if slug\match("%.%.")
+            return false, "path traversal attempt detected"
+
+        if #slug > 100
+            return false, "slug to long"
+
+        if not slug\match("^[%w%-%.%/_]+$")
+            return false, "slug contains invalid characters"
+
+        clean_slug = @clean_url slug
+
+        if clean_slug == ""
+            return false, "slug invalid after cleaning"
+
+        return true, clean_slug
     
     validate_params: (params, rules) =>
         errors = {}
@@ -93,6 +121,32 @@ class BaseController
                 is_valid, custom_message = rule_config.validator(value)
                 unless is_valid
                     errors[param_name] = custom_message or "#{param_name} is invalid"
+
+            clean_url = (url) ->
+                return "" unless url and type(url) == "string"
+                url = url\gsub(" ", "-")
+                cleaned = url\gsub("[^%w%-%.%/_]", "")
+                return cleaned
+
+            if rule_config.url and type(rule_config.url) == "function"
+                raw_url = tostring(value)
+                clean_url_value = clean_url(raw_url)
+
+                if clean_url_value == ""
+                    errors[param_name] = "url invalid"
+                    continue
+
+                if not clean_url_value\match("^https://") and not clean_url_value\match("^/")
+                    errors[param_name] = "invalid URL format"
+                    continue
+
+                if #clean_url_value > 2000
+                    errors[param_name] = "URL too long"
+
+                unless errors[param_name]
+                    is_valid, custom_message = rule_config.url(clean_url_value)
+                    unless is_valid
+                        errors[param_name] = custom_message or "#{param_name} is invalid"
 
         success = next(errors) == nil
         return success, errors

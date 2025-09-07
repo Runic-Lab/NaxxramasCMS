@@ -2,10 +2,10 @@ mediator = System.ModuleMediator\get_instance!
 
 class HomeController extends System.BaseController
     @\action "index"
-    
+
     index: (application) =>
         mediator = @get_mediator!
-        
+
         news_widget_data = mediator\request "news", "latest", application, 3
 
         application.locals = {
