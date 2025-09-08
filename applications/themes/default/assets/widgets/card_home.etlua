@@ -6,10 +6,13 @@
 
             <!-- Main Image -->
             <img
-                src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/e8/E8WQFI083QTW1738635431840.png"
+                src="<%= news:get_image() %>"
                 alt="Screenshot from World of Warcraft"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             >
+
+            <!-- Shadow Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/100 via-black/20 to-transparent"></div>
 
             <!-- Content Overlay -->
             <div class="absolute inset-0 flex flex-col justify-between p-4 z-10">
@@ -19,7 +22,7 @@
                 <!-- Bottom Content -->
                 <div class="space-y-3">
                     <!-- Date -->
-                    <time class="text-[#7E7E7E]" datetime="<%= news:get_created_at() %>">
+                    <time class="text-[#fff]" datetime="<%= news:get_created_at() %>">
                         <%= news:get_created_at() %>
                     </time>
 
