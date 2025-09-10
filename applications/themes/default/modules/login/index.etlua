@@ -1,14 +1,86 @@
-<div>
-    <h1>Login Page</h1>
-    <form method="POST" action="/login">
-        <div>
-            <label>Username:</label>
-            <input type="text" name="username" required>
+<!-- Main container -->
+<div class="min-h-screen flex justify-center items-center">
+
+    <!-- Login box -->
+    <section class="h-[80vh] w-[80vw] flex justify-center items-center px-32 border border-gray-700 rounded bg-[#0C0A09] overflow-hidden">
+
+        <!-- Logo and form -->
+        <div class="flex justify-between w-full items-center">
+
+            <!-- Logo -->
+            <div class="left">
+                <a href="/">
+                    <img src="https://i.ibb.co/rKrq9j5d/world-of-warcraft-logo-png-transparent-2.png"
+                        alt="World of Warcraft Logo"
+                        class="w-[80%]"
+                    >
+                </a>
+            </div>
+
+            <!-- Form -->
+            <div class="flex flex-col space-y-6">
+                <h1 class="text-3xl">Log in</h1>
+
+                <form class="flex flex-col space-y-8">
+
+                    <!-- Input fields -->
+                    <div class="space-y-4">
+
+                        <!-- Email -->
+                        <div class="flex flex-col space-y-2">
+                            <label for="email" class="text-sm">Email address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="px-3 py-1 bg-white text-black border border-gray-300 focus:bg-[rgba(235,163,9,0.2)] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#EBA309] focus:border-transparent"
+                                required
+                            >
+                        </div>
+
+                        <!-- Password -->
+                        <div class="flex flex-col space-y-2">
+                            <label for="password" class="text-sm">Password</label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                class="px-3 py-1 bg-white text-black border border-gray-300 focus:bg-[rgba(235,163,9,0.2)] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#EBA309] focus:border-transparent"
+                                required
+                            >
+                        </div>
+
+                        <!-- Remember me -->
+                        <div class="flex items-center space-x-2">
+                            <input
+                                type="checkbox"
+                                id="remember"
+                                name="remember"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-[#EBA309]"
+                            >
+                            <label for="remember" class="text-sm">Remember me</label>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="space-y-4">
+
+                        <!-- Login button -->
+                        <button
+                            type="submit"
+                            class="orange-outline-button w-full"
+                        >
+                            Login
+                        </button>
+
+                        <!-- Register link -->
+                        <p class="text-center text-sm">
+                            Don't have an account?
+                            <a href="/register" class="text-[#EBA309] hover:underline">Register</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div>
-            <label>Password:</label>
-            <input type="password" name="password" required>
-        </div>
-        <button type="submit">Login</button>
-    </form>
+    </section>
 </div>
