@@ -6,6 +6,10 @@ class LoginController extends System.BaseController
     index: (application) =>
         mediator = @get_mediator!
 
+        data = {
+            hideNavigation: true
+        }
+
         return @render_view "index"
 
 LoginController!\register_as "login"

@@ -23,13 +23,17 @@
     <body>
 
         <!-- Navigation -->
-        <% render("applications.themes.default.assets.widgets.nav") %>
+        <% if not string.match(ngx.var.request_uri, "/login") then %>
+            <% render("applications.themes.default.assets.widgets.nav") %>
+        <% end %>
 
         <!-- Pages content -->
         <% content_for("inner") %>
 
         <!-- Footer -->
-        <% render("applications.themes.default.assets.widgets.footer") %>
+        <% if not string.match(ngx.var.request_uri, "/login") then %>
+            <% render("applications.themes.default.assets.widgets.footer") %>
+        <% end %>
 
     </body>
 
