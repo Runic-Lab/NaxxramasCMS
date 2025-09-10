@@ -14,9 +14,9 @@
                 <li><a href="/" class="relative py-[25px] px-2 hover:text-[#EBA309] hover-underline-animation">Home</a></li>
 
                 <!-- News link -->
-                <li><a href="/news" class="relative py-[25px] px-2 hover:text-[#EBA309] hover-underline-animation">News</a></li>
+                <li><a href="/news#news-section" class="relative py-[25px] px-2 hover:text-[#EBA309] hover-underline-animation scroll-smooth">News</a></li>
 
-                <!-- Game Info dropdown (3e li non modifié) -->
+                <!-- Game Info dropdown -->
                 <li class="relative group">
                     <a href="#" class="relative py-[25px] px-2 pb-7 text-white hover:text-[#EBA309]">
                         Game Info

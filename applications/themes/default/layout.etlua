@@ -18,6 +18,7 @@
 
         <!-- Custom JS -->
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="/themes/default/assets/js/smooth.js"></script>
     </head>
     <body>
 
