@@ -30,7 +30,7 @@ class NewsController extends System.BaseController
 
     detail: (application) =>
         slug = application.params.slug
-        is valid, result = @validate_slug
+        is_valid, result = @validate_slug
 
         unless is_valid
             application.locals = {
