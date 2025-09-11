@@ -23,7 +23,7 @@
     <body>
 
         <!-- Navigation -->
-        <% if not string.match(ngx.var.request_uri, "/login") then %>
+        <% if route_name ~= "login" then %>
             <% render("applications.themes.default.assets.widgets.nav") %>
         <% end %>
 
@@ -31,7 +31,7 @@
         <% content_for("inner") %>
 
         <!-- Footer -->
-        <% if not string.match(ngx.var.request_uri, "/login") then %>
+        <% if route_name ~= "login" then %>
             <% render("applications.themes.default.assets.widgets.footer") %>
         <% end %>
 

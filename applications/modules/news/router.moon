@@ -3,7 +3,7 @@ mediator = System.ModuleMediator\get_instance!
 
 return (self) ->
 
-    @\match "news_list", "/news", app_respond_to
+    @\match "news_index", "/news", app_respond_to
         GET: (app) ->
             mediator\request "news", "index", app
 
