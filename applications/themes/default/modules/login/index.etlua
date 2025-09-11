@@ -2,50 +2,52 @@
 <div class="min-h-screen flex justify-center items-center">
 
     <!-- Login box -->
-    <section class="h-[80vh] w-[80vw] flex justify-center items-center px-32 border border-gray-700 rounded bg-[#0C0A09] overflow-hidden">
+    <section class="h-[80vh] w-auto flex justify-center items-center px-60 m-20 border border-gray-700 rounded bg-[#0C0A09] overflow-hidden">
 
-        <!-- Logo and form -->
-        <div class="flex justify-between w-full items-center">
+        <!-- Logo and form - Version avec gap contrôlé -->
+        <div class="flex justify-center items-center w-full gap-56">
 
             <!-- Logo -->
-            <div class="left">
+            <div class="flex-shrink-0">
                 <a href="/">
                     <img src="https://i.ibb.co/rKrq9j5d/world-of-warcraft-logo-png-transparent-2.png"
                         alt="World of Warcraft Logo"
-                        class="w-[80%]"
+                        class="w-full"
                     >
                 </a>
             </div>
 
             <!-- Form -->
-            <div class="flex flex-col space-y-6">
-                <h1 class="text-3xl">Log in</h1>
+            <div class="flex flex-col justify-between w-70 space-y-10">
+                <h1 class="text-4xl">Log in</h1>
 
-                <form class="flex flex-col space-y-8">
+                <form class="flex flex-col space-y-32">
 
                     <!-- Input fields -->
-                    <div class="space-y-4">
+                    <div class="text-lg space-y-4">
 
                         <!-- Email -->
                         <div class="flex flex-col space-y-2">
-                            <label for="email" class="text-sm">Email address</label>
+                            <label for="email" class="">Email address</label>
                             <input
                                 type="email"
                                 id="email"
                                 name="email"
-                                class="px-3 py-1 bg-white text-black border border-gray-300 focus:bg-[rgba(235,163,9,0.2)] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#EBA309] focus:border-transparent"
+                                placeholder="Email"
+                                class="px-3 py-1 mb-2 bg-white text-black border border-gray-300 focus:bg-[rgba(235,163,9,0.2)] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#EBA309] focus:border-transparent transition-all duration-300"
                                 required
                             >
                         </div>
 
                         <!-- Password -->
                         <div class="flex flex-col space-y-2">
-                            <label for="password" class="text-sm">Password</label>
+                            <label for="password" class="">Password</label>
                             <input
                                 type="password"
                                 id="password"
                                 name="password"
-                                class="px-3 py-1 bg-white text-black border border-gray-300 focus:bg-[rgba(235,163,9,0.2)] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#EBA309] focus:border-transparent"
+                                placeholder="Password"
+                                class="px-3 py-1 bg-white text-black border border-gray-300 focus:bg-[rgba(235,163,9,0.2)] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#EBA309] focus:border-transparent transition-all duration-300"
                                 required
                             >
                         </div>
@@ -56,7 +58,7 @@
                                 type="checkbox"
                                 id="remember"
                                 name="remember"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-[#EBA309]"
+                                class="w-4 h-4 cursor-pointer accent-[#EBA309]"
                             >
                             <label for="remember" class="text-sm">Remember me</label>
                         </div>
@@ -68,13 +70,13 @@
                         <!-- Login button -->
                         <button
                             type="submit"
-                            class="orange-outline-button w-full"
+                            class="orange-outline-button w-full cursor-pointer"
                         >
                             Login
                         </button>
 
                         <!-- Register link -->
-                        <p class="text-center text-sm">
+                        <p class="text-sm">
                             Don't have an account?
                             <a href="/register" class="text-[#EBA309] hover:underline">Register</a>
                         </p>
