@@ -7,7 +7,7 @@ class RegisterController extends System.BaseController
         mediator = @get_mediator!
 
         data = {
-            hideNavigation: true
+            hide_navigation: true
         }
 
         return @render_view "index"
